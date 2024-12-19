@@ -23,19 +23,6 @@
       </span>
       <h2 class="mb-0">
         {{ instance.instance.instanceName }}
-        <v-chip
-          v-if="instance?.instance?.apikey"
-          color="info"
-          class="ml-2"
-          size="x-small"
-          @click="copyApikey"
-        >
-          <v-icon start size="small">mdi-key</v-icon>
-          {{ (instance.instance?.apikey || "").slice(0, 10) }}...
-          <v-icon end size="small">
-            {{ copied ? "mdi-check" : "mdi-content-copy" }}
-          </v-icon>
-        </v-chip>
       </h2>
       <small>{{ instance.instance.profileStatus }}</small>
     </div>

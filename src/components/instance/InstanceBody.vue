@@ -1,23 +1,4 @@
 <template>
-  <v-tabs v-model="tab" background-color="transparent" color="primary" grow>
-    <v-tab v-for="tab in tabs" :key="tab.id" :value="tab.id">
-      <v-icon start>{{ tab.icon }}</v-icon>
-      {{ $t(`instanceTabs.${tab.id}`) }}
-    </v-tab>
-  </v-tabs>
-
-  <v-window v-model="tab">
-    <v-window-item v-for="tab in tabs" :key="tab.id" :value="tab.id">
-      <div class="d-flex flex-column gap-6">
-        <component
-          v-for="component in tab.components"
-          :key="component"
-          :is="component"
-          :instance="instance"
-        />
-      </div>
-    </v-window-item>
-  </v-window>
 </template>
 
 <script>

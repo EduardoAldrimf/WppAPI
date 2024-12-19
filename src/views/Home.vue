@@ -12,18 +12,7 @@
         class="mr-2"
       >
         <v-icon>mdi-refresh</v-icon>
-      </v-btn>
-      <v-btn
-        color="primary"
-        variant="tonal"
-        @click="addInstance"
-        :disabled="loading"
-      >
-        <v-icon>mdi-plus</v-icon>
-        <span class="ml-2">
-          {{ $t("instance") }}
-        </span>
-      </v-btn>
+      </v-btn>  
     </div>
 
     <v-row dense>
@@ -112,17 +101,6 @@
                 <h5>{{ instance.instanceName }}</h5>
               </div>
               <div class="ml-auto flex-shrink-0">
-                <v-btn
-                  :disabled="loading || !!loadingDelete"
-                  :loading="loadingDelete === instance.instanceName"
-                  @click.stop="deleteInstance(instance.instanceName)"
-                  icon
-                  variant="tonal"
-                  color="error"
-                  size="x-small"
-                >
-                  <v-icon>mdi-delete</v-icon>
-                </v-btn>
               </div>
             </div>
           </v-card>

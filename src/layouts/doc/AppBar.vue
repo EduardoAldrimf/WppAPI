@@ -5,7 +5,7 @@
         <v-icon>mdi-menu</v-icon>
       </v-btn>
       <v-btn variant="text" @click="$router.push({ name: 'doc' })">
-        <v-img src="@/assets/logo.png" height="24" width="24" class="mr-2" />
+        <v-img src="@/assets/Letschat.svg" height="24" width="24" class="mr-2" />
         Evolution Doc
       </v-btn>
     </v-app-bar-title>
